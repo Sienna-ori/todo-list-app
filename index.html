@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <h1>Todo List</h1>
+      </header>
+
+      <form id="todo-form" class="todo-form">
+        <input
+          id="todo-input"
+          type="text"
+          placeholder="Add a new task..."
+          aria-label="Add a new task"
+          maxlength="100"
+          required
+        />
+        <button type="submit">Add</button>
+      </form>
+
+      <div class="toolbar">
+        <div class="filters" aria-label="Filter tasks">
+          <button class="filter-btn active" data-filter="all" type="button">All</button>
+          <button class="filter-btn" data-filter="active" type="button">Active</button>
+          <button class="filter-btn" data-filter="completed" type="button">Completed</button>
+        </div>
+
+        <button id="clear-completed" class="secondary-btn" type="button">
+          Clear Completed
+        </button>
+      </div>
+
+      <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+
+      <footer class="app-footer">
+        <span id="task-count">0 tasks left</span>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
